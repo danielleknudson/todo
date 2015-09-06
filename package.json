@@ -1,0 +1,25 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todo app in Backbone.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielleknudson/todo.git"
+  },
+  "author": "danielleknudson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielleknudson/todo/issues"
+  },
+  "homepage": "https://github.com/danielleknudson/todo#readme",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "backbone.localstorage": "^1.1.16",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}
