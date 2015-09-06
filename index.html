@@ -1,0 +1,47 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- optimize page for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Another Todo</title>
+  <link rel="stylesheet" href="app/css/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Another Todo List</h1>
+    <input id="todo-input" type="text" placeholder="What do you have to do?" autofocus/>
+    <section id="todos"></section>
+  </main>
+<footer id="stats-footer"></footer>
+
+<!-- templates -->
+<script type="text/template" id="todo-template">
+  <input type="checkbox" class="toggle" <% if (completed) ? 'checked' : '' %> />
+  <label><%- title %></label>
+  <input type="text" class="edit"  value="<%- title %>" />
+</script>
+
+<script type="text/template" id="stats-template">
+  <span><strong><%- remaining %></strong><% if (remaining === 1) ? "item" : "items" %> left</span>
+  <span><a href="#/" class="selected">All</a></span>
+  <span><a href="#/active">Active</span>
+  <span><a href="#/completed">Completed</span>
+</script>
+
+<!-- load dependencies -->
+<script src="app/lib/jquery.min.js"></script>
+<script src="app/lib/underscore-min.js"></script>
+<script src="app/lib/backbone-min.js"></script>
+<script src="app/lib/backbone.localStorage-min.js"></script>
+
+<!-- load app scripts -->
+<script src="app/models/todo.model.js"></script>
+<script src="app/collections/todos.collection.js"></script>
+<script src="app/views/todo.view.js"></script>
+<script src="app/views/todos.view.js"></script>
+<script src="app/views/app.view.js"></script>
+<script src="app/router.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>
