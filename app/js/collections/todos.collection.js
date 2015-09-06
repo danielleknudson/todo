@@ -19,6 +19,7 @@ var TodoList = Backbone.Collection.extend({
     }
     return this.models.last().get('id') + 1;
   },
+  // determines model sorting order within the collection
   comparator: function (todo) {
     return todo.get('id');
   }
