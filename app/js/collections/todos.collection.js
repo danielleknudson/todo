@@ -14,10 +14,10 @@ var TodoList = Backbone.Collection.extend({
     });
   },
   generateId: function () {
-    if (!this.models.length) {
+    if (!this.length) {
       return 1;
     }
-    return this.models.last().get('id') + 1;
+    return this.last().get('id') + 1;
   },
   // determines model sorting order within the collection
   comparator: function (todo) {
